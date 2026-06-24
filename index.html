@@ -36,7 +36,7 @@
         const cardName = searchInput.value.trim();
         if (cardName) {
             // FIXED: Changes ?id= to ?name= so card.html triggers the grid view properly
-            window.location.href = `card.html?name=${encodeURIComponent(cardName)}`;
+            window.location.href = `./card.html?name=${encodeURIComponent(cardName)}`;
         } else {
             alert('Please enter a card name!');
         }
