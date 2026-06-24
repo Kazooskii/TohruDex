@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TohruDex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="title-container">
+    <img class="title-gif" src="/Gifs/Iruru.gif" alt="Left GIF">
+
+    <h1>TohruDex</h1>
+
+    <img class="title-gif" src="/Gifs/Tohru.gif" alt="Left GIF">
+</div>
+
+    <h2>Your sorta reliable Pokemon Card pricing site</h2>
+    
+
+    <div class="search-container">
+        <input type="text" placeholder="Enter Card ID (e.g, swsh3-136)">
+        <button>Search</button>
+    </div>
+
+    <script>
+    const searchInput = document.querySelector('input');
+    const searchButton = document.querySelector('button');
+
+    // Update the input placeholder to prompt for a card name
+    if (searchInput) {
+        searchInput.placeholder = "Enter Card Name (e.g., Charizard, Skyla)";
+    }
+
+    function executeSearch() {
+        const cardName = searchInput.value.trim();
+        if (cardName) {
+            // FIXED: Changes ?id= to ?name= so card.html triggers the grid view properly
+            window.location.href = `card.html?name=${encodeURIComponent(cardName)}`;
+        } else {
+            alert('Please enter a card name!');
+        }
+    }
+
+    searchButton.addEventListener('click', executeSearch);
+    
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') executeSearch();
+    });
+</script>
+</body>
+</html>

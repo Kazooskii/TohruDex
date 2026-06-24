@@ -1,0 +1,285 @@
+@font-face {
+    font-family: 'CustomKawaii';
+    src: url('CustomKawaii.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.search-container {
+    margin: 25px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.search-container input {
+    font: 'CustomKawaii', sans-serif;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: 3px solid #222240;
+    border-radius: 8px;
+    width: 280px;
+    outline: none;
+    color: #222240;
+}
+
+.search-container button {
+    font-family: 'CustomKawaii', sans-serif;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    background-color: #222240;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+/* Quick hover effect for the button */
+.search-container button:hover {
+    transform: scale(1.05);
+}
+
+body {
+    /* 1. Set your image as the repeating background */
+    background-image: url('PLDHR.png');
+    background-repeat: repeat;
+    background-size: 2000px;
+
+    /* 2. Link the custom animation we made below */
+    animation: moveBackground 20s linear infinite alternate;
+
+
+    background-color: #ff9b7d;
+    font-family: 'CustomKawaii', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 40px 20px;
+    
+    /* Center everything on the screen nicely */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 0px #222240; /* Dark 3D shadow effect */
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+
+h2 {
+    font-size: 1.5rem;
+    opacity: 0.9; /* Makes it slightly softer than the main title */
+    margin-top: 0;
+    text-align: center;
+    text-shadow: 3px 3px 0px #222240;
+    letter-spacing: 2px;
+    
+}
+
+
+
+/* 3. The logic moves the bg */
+@keyframes moveBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -400px -400px; /* Matches the background-size to keep the loop seamless */
+    }
+}
+
+/* This aligns the items horizontally and centers them perfectly */
+.title-container {
+    display: flex;
+    align-items: center;  /* Vertically aligns the middle of the GIFs with the middle of the text */
+    justify-content: center;
+    gap: 20px;            /* Adds a clean space between the GIFs and your text */
+    margin-bottom: 5px;   /* Pushes the subtitle down slightly */
+}
+
+/* Control the size and look of the side GIFs */
+.title-gif {
+    width: 80px;          /* Adjust this number to make the side GIFs bigger or smaller */
+    height: auto;         /* Keeps the aspect ratio perfect so they don't look squished */
+    
+    /* Optional: Gives them the same cute 3D shadow style as your text */
+    filter: drop-shadow(3px 3px 0px #222240); 
+}
+
+/* Adjust your existing H1 slightly so it behaves nicely inside the container */
+h1 {
+    margin: 0;            /* Removes default margins that might push things out of alignment */
+}
+
+
+
+
+/* --- New Card Page Styles --- */
+
+/* The main box holding the card (left) and text (right) */
+.card-display-box {
+    background-color: #fdb776;
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: row; /* Forces left-to-right alignment */
+    align-items: center;
+    gap: 30px;
+    max-width: 650px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    border: 4px solid #ffffff;
+    margin-top: 10px;
+}
+
+/* Made the card art smaller as requested */
+.display-card-img {
+    width: 170px; /* Reduced from 220px to make it sleeker */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+/* Text layout container */
+.display-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* FONT SAFETY FIXES */
+.font-kawaii {
+    font-family: 'CustomKawaii', sans-serif;
+}
+
+/* Uses a standard clean sans-serif for numbers/slashes so they display perfectly */
+.font-standard {
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+.display-info h2 {
+    font-size: 2.4rem;
+    margin: 0 0 8px 0;
+    color: #ffffff;
+}
+
+.set-info {
+    font-size: 1.1rem;
+    color: #000000;
+    opacity: 0.8;
+    margin: 0 0 20px 0;
+}
+
+/* Price Box Layout */
+.price-badge {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 12px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.price-label {
+    font-size: 0.85rem;
+    color: #000000;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.price-val {
+    font-size: 1.8rem;
+    color: #22a32d; /* Golden yellow for readable pricing */
+    font-weight: bold;
+}
+
+/* Custom Back Home Button Styles */
+.custom-back-btn {
+    font-family: 'CustomKawaii', sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #222240;
+    padding: 10px 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    border: 3px solid #ffffff;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.custom-back-btn:hover {
+    background-color: #ffffff;
+    color: #222240;
+    cursor: pointer;
+}
+
+/* Stack it vertically only on small mobile devices */
+@media (max-width: 600px) {
+    .card-display-box {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .display-info {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* --- Selection Grid Layout --- */
+.grid-title {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+/* Individual clickable card items inside the list results */
+.grid-card-item {
+    background-color: #222240;
+    border: 3px solid #ffffff;
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grid-card-item:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    background-color: #2c2c54;
+}
+
+.grid-card-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.grid-card-item p {
+    font-size: 0.8rem;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.2;
+    opacity: 0.9;
+}
